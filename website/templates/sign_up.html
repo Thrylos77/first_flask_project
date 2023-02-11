@@ -1,0 +1,95 @@
+{% extends "base.html" %}  {% block title %}Sign up{% endblock %}
+{% block content %}
+<html lang="en fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style_up.css')}}">
+    <title>Sign Up</title>
+</head>
+<body style="position:absolute;">
+<form class="requires-validation" novalidate method="POST">
+        <div class="form-group">
+            <div class="form-body">
+        <div class="row">
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <h3>Register</h3>
+                        <p>Fill in the data below.</p>
+                            <div class="col-md-12">
+                               <input class="form-control"
+                                      type="text"
+                                      name="firstName"
+                                      placeholder="First Name"
+                                      minlength="2"
+                                      required >
+                               <div class="valid-feedback">First Name field is valid!</div>
+                               <div class="invalid-feedback">First Name field cannot be blank!</div>
+                            </div>
+                            <div class="col-md-12">
+                               <input class="form-control"
+                                      type="text"
+                                      name="lastName"
+                                      placeholder="Last Name"
+                                      minlength="2"
+                                      required>
+                               <div class="valid-feedback">Last Name field is valid!</div>
+                               <div class="invalid-feedback">Last Name field cannot be blank!</div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <input class="form-control"
+                                       type="email"
+                                       name="email"
+                                       placeholder="E-mail Address"
+                                       required>
+                                 <div class="valid-feedback">Email field is valid!</div>
+                                 <div class="invalid-feedback">Email field cannot be blank!</div>
+                            </div>
+
+                           <div class="col-md-12">
+                              <input class="form-control"
+                                     type="password"
+                                     name="password1"
+                                     placeholder="Password"
+                                     minlength="8"
+                                     required>
+                               <div class="valid-feedback">Password field is valid!</div>
+                               <div class="invalid-feedback">Password field cannot be blank!</div>
+                           </div>
+                           <div class="col-md-12">
+                              <input class="form-control"
+                                     type="password"
+                                     name="password2"
+                                     placeholder="Confirm your password"
+                                     required>
+                               <div class="valid-feedback">Confirm your password!</div>
+                               <div class="invalid-feedback">This field cannot be blank!</div>
+                                <p></p>
+
+                        <!--<div class="form-check">
+                          <input class="form-check-input"
+                                 type="checkbox"
+                                 value=""
+                                 id="invalidCheck"
+                                 required>
+                          <label class="form-check-label">I confirm that all data are correct</label>
+                         <div class="invalid-feedback">Please confirm that the entered data are all correct!</div>
+                        </div>-->
+
+                            <div class="form-button mt-3">
+                                <button id="submit" type="submit" class="btn btn-primary">Register</button>
+                            </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+</body>
+</html>
+
+{% endblock %}
